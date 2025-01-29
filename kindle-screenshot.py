@@ -10,13 +10,13 @@ def capture_and_click(num_loops):
 
 
         # 座標(Mac)
-        # left_up=[0,56]
+        # left_up=[115,56]
         # left_down=[0,900]
         # right_up=[1440,56]
         # right_down=[1440,900]
 
         # スクリーンショットを撮影
-        screenshot = pyautogui.screenshot(region=[0,56,1440,900])
+        screenshot = pyautogui.screenshot(region=[115,56,1330,900])
         screenshots.append(screenshot)
   
         # pyautogui.click(x=32, y=475, button="left", clicks=num_loops, interval=0.5)
@@ -34,4 +34,4 @@ def capture_and_click(num_loops):
     print(f"{num_loops}回のスクリーンショットとクリックが完了しました。PDFが保存されました。")
 
 # 使用例
-capture_and_click(num_loops=165)
+capture_and_click(num_loops=99)
