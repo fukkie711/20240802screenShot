@@ -21,13 +21,19 @@ def capture_and_click(num_loops):
         # print(pyautogui.locateOnScreen(screenshot))
 
         # クロップする
-        # 新書1ページ
-        croped = screenshot.crop((820, 0, 2060, 1800))
+        # # 新書1ページ
+        # croped = screenshot.crop((820, 0, 2060, 1800))
+
+        # 見開き1ページ
+        croped = screenshot.crop((100, 0, 2800, 1800))
 
         screenshots.append(croped)
   
         # ページ送り（右の「次へ」ボタン）
-        pyautogui.click(x=1400, y=450, button="left", interval=0.5)
+        # pyautogui.click(x=1400, y=450, button="left", interval=0.5)
+
+        # ページ送り（左の「次へ」ボタン）
+        pyautogui.click(x=20, y=450, button="left", interval=0.5)
 
     #ファイル名のための日時取得
     now = datetime.now().strftime('%Y%m%d%H%M%S')
@@ -39,4 +45,4 @@ def capture_and_click(num_loops):
     print(f"{num_loops}回のスクリーンショットとクリックが完了しました。PDFが保存されました。")
 
 # 使用例
-capture_and_click(num_loops=330)
+capture_and_click(num_loops=90)
